@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Formulário 2</title>
+</head>
+<body>
+   <h3>Preencha seus dados</h3>
+   <form action="">
+      <fieldset>
+         <legend>Nome e senha</legend>
+         <label for="name">Nome: </label>
+         <input type="text" id="name">
+         <br />
+         <label for="password">Senha: </label>
+         <input type="password" id="password">
+      </fieldset>
+      <fieldset>
+         <legend>Data de nascimento</legend>
+         <input type="date">
+      </fieldset>
+      <fieldset>
+         <legend>Sexo</legend>
+         <input type="radio" name="sexo" id="m" value="Masculino">
+         <label for="m">Masculino</label>
+         <br />
+         <input type="radio" name="sexo" id="f" value="Feminino">
+         <label for="f">Feminino</label>
+         <br />
+         <input type="radio" name="sexo" id="n" value="Não declarado">
+         <label for="n">Não declarado</label>
+      </fieldset>
+      <fieldset>
+         <legend>Conhecimento em programação</legend>
+         <input type="checkbox" name="conhecimento" id="html">
+         <label for="html">html</label>
+         <br />
+         <input type="checkbox" name="conhecimento" id="css">
+         <label for="css">css</label>
+         <br />
+         <input type="checkbox" name="conhecimento" id="js">
+         <label for="js">javascript</label>
+         <br />
+         <input type="checkbox" name="conhecimento" id="node">
+         <label for="node">node</label>
+         <br />
+         <input type="checkbox" name="conhecimento" id="react">
+         <label for="react">react</label>
+         <br />
+      </fieldset>
+      <fieldset>
+         <legend>Conhecimento Prévio</legend>
+         <label for="">Baixo</label>
+         <input type="range">
+         <label for="">Alto</label>
+      </fieldset>
+      <input type="reset">
+      <input type="submit">
+   </form>
+</body>
+</html>
