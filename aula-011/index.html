@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Exercicio Canvas</title>
+</head>
+<body>
+   <canvas id="canvas" style="border: 1px solid" width="900" height="600"></canvas>
+   <script>
+     var canvas = document.getElementById('canvas')
+     var ctx = canvas.getContext('2d')
+
+     var x = 100
+     var y = 100
+     var r = 70
+     var vx = 3
+     var vy = 3
+
+     var x2 = 500
+     var y2 = 100
+     var vx2 = 5
+     var vy2 = 5
+
+
+  function createCircle() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+    if(x > canvas.width - r || x < r) {
+      vx=-vx
+    }
+    if(y > canvas.height - r || y < r) {
+      vy=-vy
+    }
+
+    x += vx
+    y += vy
+
+    ctx.beginPath()
+    ctx.arc(x, y, r, 0, Math.PI * 2)
+    ctx.fillStyle="blue"
+    ctx.fill()
+    ctx.stroke()
+
+    if(x2 > canvas.width - r || x2 < r) {
+      vx2=-vx2
+    }
+    if(y2 > canvas.height - r || y2 < r) {
+      vy2=-vy2
+    }
+
+    x2 += vx2
+    y2 += vy2
+
+    ctx.beginPath()
+    ctx.arc(x2, y2, r, 0, Math.PI * 2)
+    ctx.fillStyle="red"
+    ctx.fill()
+    ctx.stroke()
+       
+  }
+  setInterval(createCircle, 10)
+   </script>
+</body>
+</html>
